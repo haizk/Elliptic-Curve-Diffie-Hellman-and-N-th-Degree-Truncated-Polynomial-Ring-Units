@@ -108,7 +108,7 @@ class ECDH:
         self.bob_pri_load_btn = ttk.Button(self.bob_pri_frame, text="Load", style="Accent.TButton")
         self.bob_pri_load_btn.grid(row=1, column=0, sticky="NESW", padx=10, pady=10)
 
-        # BobPrivate Key Save Button
+        # Bob Private Key Save Button
         self.bob_pri_save_btn = ttk.Button(self.bob_pri_frame, text="Save", style="Accent.TButton")
         self.bob_pri_save_btn.grid(row=1, column=1, sticky="NESW", padx=10, pady=10)
 
@@ -117,6 +117,7 @@ class ECDH:
         self.gen_frame = ttk.LabelFrame(self.frame, text="Generate Key", padding=10)
         self.gen_frame.grid(row=0, column=0, padx=10, pady=10)
 
+        # Generate Key Combobox
         self.gen_option = ttk.Combobox(self.gen_frame)
         self.gen_option['values'] = ("CHOOSE CURVE", "SECP256R1", "SECP384R1", "SECP521R1", "SECP224R1", "SECP192R1", "SECP256K1", "BrainpoolP256R1", "BrainpoolP384R1", "BrainpoolP512R1", "SECT571K1", "SECT409K1", "SECT283K1", "SECT233K1", "SECT163K1", "SECT571R1", "SECT409R1", "SECT283R1", "SECT233R1", "SECT163R2")
         self.gen_option.current(0)
