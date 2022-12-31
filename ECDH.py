@@ -58,7 +58,7 @@ class ECDH:
         self.alice_pri_load_btn = ttk.Button(self.alice_pri_frame, text="Load", style="Accent.TButton")
         self.alice_pri_load_btn.grid(row=1, column=0, sticky="NESW", padx=10, pady=10)
 
-        # AlicePrivate Key Save Button
+        # Alice Private Key Save Button
         self.alice_pri_save_btn = ttk.Button(self.alice_pri_frame, text="Save", style="Accent.TButton")
         self.alice_pri_save_btn.grid(row=1, column=1, sticky="NESW", padx=10, pady=10)
 
