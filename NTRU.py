@@ -1,10 +1,8 @@
-import io
 import time
 import tkinter
 from tkinter import ttk, filedialog
 from NTRUencrypt import NTRUencrypt
 from NTRUdecrypt import NTRUdecrypt
-from NTRUutil import *
 
 
 class NTRU:
@@ -369,11 +367,17 @@ class NTRU:
         self.pri_text.insert("1.0", str("GENERATED!\nCheck key.pri"))
 
     def encrypt_ntru(self):
+        start_time = time.time()
         self.N2.encryptString(self.pla_text.get("1.0", "end"))
+        end_time = time.time()
         self.cip_text.delete("1.0", "end")
         self.cip_text.insert("1.0", self.N2.Me)
+        self.alert("Encrypted!\nTime Used: " + str(end_time - start_time))
 
     def decrypt_ntru(self):
+        start_time = time.time()
         self.N1.decryptString(self.N2.Me)
+        end_time = time.time()
         self.pla_text.delete("1.0", "end")
         self.pla_text.insert("1.0", self.N1.M)
+        self.alert("Decrypted!\nTime Used: " + str(end_time - start_time))
